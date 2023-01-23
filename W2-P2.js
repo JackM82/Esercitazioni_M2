@@ -14,7 +14,7 @@ me.skills.pop()
   Scrivi del codice per creare un array di soli valori DISPARI da 1 a 100.
  */
 let numDisp = [];
-for(i = 1; i <= 100; i++){
+for(let i = 1; i <= 100; i++){
   if (i %2 !== 0) {
     numDisp.push(i);
   }
@@ -27,7 +27,7 @@ console.log(numDisp);
 
 let tenNumRandom = [];
 let NumRandom;
-for(i = 0; i < 10; i++){
+for(let i = 0; i < 10; i++){
   NumRandom = Math.floor(Math.random() * 101);
   tenNumRandom.push(NumRandom);  
 }
@@ -37,7 +37,7 @@ console.log(tenNumRandom);
   Scrivi del codice per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
 let int = [2,5,4,66,53,101,334,6,12,75,77,3,8]
-for(i = 0; i < int.length; i++){
+for(let i = 0; i < int.length; i++){
   let index = int[i];
   if (index %2 === 0){
     console.log('rilevato numero pari = '+index);
@@ -50,7 +50,7 @@ for(i = 0; i < int.length; i++){
 let q = [1 , 3.5 , 10 , 1.2];
 function sommaArr(arr){
   let somma = 0;
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     somma += arr[i];    
   }
   return ('il totale della somma dei numeri è = '+somma);
@@ -63,7 +63,7 @@ console.log(totale);
 */
 let z = [1 , 5.5 , 6 , -50];
 function incVal(arr){  
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     arr[i] += 1;    
   }
   return (arr);
@@ -76,7 +76,7 @@ console.log(arrayIncrementato);
 */
 let c = [1 , 55 , 6 , -50 , 71 , 80 , 11];
 function eraseEven(arr){  
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     if(Math.abs(arr[i] %2) == 0)//perchè non elimina -50 dall'array???
     arr.splice(i,1);   
   }
@@ -91,7 +91,7 @@ console.log(c1);
 
 let TenNumRandom = [];
 let numRandom;
-for(i = 0; i < 10; i++){
+for(let i = 0; i < 10; i++){
   numRandom = Math.floor(Math.random() * 11);  
   for(z = 0; z <= i; z++){
     if (numRandom !== TenNumRandom[z]){
@@ -114,7 +114,7 @@ let str = ["EPICODE", "is", "great", "Android"]; //[7, 2, 5, 7]
 
 function strLen(arr){
   let resArr = [];
-  for(i=0 ; i < str.length; i++){
+  for(let i=0 ; i < str.length; i++){
     posLen = arr[i].length;
     resArr[i] = posLen;    
   }
@@ -138,7 +138,7 @@ console.log(array02);
 var myArray = [2, 7, 52, 3.5, 100.1, 4, 5.5];
 function FindMax(arr){
   let max = 0;
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
       if(arr[i] > max){
           max = arr[i];
       }
@@ -272,7 +272,7 @@ function FindOldest(arr){
   let ActOldestYear = new Date().getFullYear(); //ottieni il corrente anno
   let ActPosYear = 0;
   let OldestIndexPos = 0;
-  for(i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     ActPosYear = parseInt(arr[i].Year);
     if (ActPosYear <= ActOldestYear){
       OldestIndexPos = i;   
@@ -301,7 +301,7 @@ console.log("nell'array ci sono "+numPos+" films");
 
 function getTitles(arr){
   let arrTitles = [];
-  for(i=0; i<arr.length ;i++){
+  for(let i=0; i<arr.length ;i++){
     arrTitles.push(arr[i].Title);
   }
   return arrTitles;
@@ -314,7 +314,7 @@ console.log(MyArrTitles);
 */
 function getMovies2000(arr){
   let arr2000 = [];
-  for(i=0; i<arr.length ;i++){
+  for(let i=0; i<arr.length ;i++){
     let year = parseInt(arr[i].Year);
     if (year >= 2000){
       arr2000.push(arr[i]);
@@ -331,7 +331,7 @@ console.log(Movies2000);
 */
 const id = 'tt0355702'
 let Movie
-for(i = 0; i < movies.length; i++){
+for(let i = 0; i < movies.length; i++){
   if (movies[i].imdbID === id){
     Movie = movies[i];
     break;
@@ -347,7 +347,7 @@ console.log(Movie);
 */
 
 let somma = 0;
-for(i = 0; i < movies.length; i++){
+for(let i = 0; i < movies.length; i++){
   let anno = parseInt(movies[i].Year)
   somma += anno;  
 }
@@ -360,7 +360,7 @@ console.log(somma);
 let words = 'Lord';
 let Titles = [];
 let match = 0;
-for(i = 0; i < movies.length; i++){
+for(let i = 0; i < movies.length; i++){
   match = movies[i].Title.search(words);
   if (match !== -1){
     Titles.push(movies[i]);
